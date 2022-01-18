@@ -32,4 +32,6 @@ def extract_indeed_jobs(last_page):
     if title == "new":
       title = jobTitle.find_all("span")[1].string
       print(title)
+      company = result.find("span",{"class":"companyName"}).string      
+      print(company)
   return jobs
